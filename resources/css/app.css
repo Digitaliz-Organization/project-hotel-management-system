@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-700;
+}
+
+/* Button */
+.btn {
+  @apply normal-case text-sm h-10 rounded-md min-h-0 font-medium disabled:cursor-not-allowed;
+}
+
+.btn.btn-primary {
+  @apply text-white bg-primary disabled:bg-primary disabled:bg-opacity-50;
+}
+/* End Button */
+
+/* Form */
+.form-control {
+  @apply block w-full text-sm border h-10 border-gray-300 focus:outline-none focus:ring-4 focus:ring-gray-50 focus:border-gray-500 transition duration-100 rounded-md px-3;
+}
+
+.form-checkbox {
+  @apply w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-gray-500 focus:ring-2;
+}
+
+.label-checkbox {
+  @apply ml-2 text-sm font-medium text-primary
+}
+
+.form-label {
+  @apply block font-medium mb-1 text-gray-700;
+}
+
+.input-group {
+  @apply relative flex items-stretch w-full;
+}
+
+.input-group.left .input-group-text {
+  @apply block w-auto px-3 py-2.5 text-gray-600 border border-r-0 border-gray-300 rounded-md rounded-r-none bg-gray-50 text-sm font-medium text-center whitespace-nowrap;
+}
+
+.input-group.right .input-group-text {
+  @apply block w-auto px-3 py-2.5 text-gray-600 border border-l-0 border-gray-300 rounded-md rounded-l-none bg-gray-50 text-sm font-medium text-center whitespace-nowrap;
+}
+
+.input-group.left input {
+  @apply rounded-l-none;
+}
+
+.input-group.right input {
+  @apply rounded-r-none;
+}
+
+.input-join {
+  @apply relative;
+}
+
+.input-join i {
+  @apply absolute top-0 bottom-0 text-sm items-center flex;
+}
+
+.input-join.left i {
+  @apply left-3 right-auto;
+}
+
+.input-join.left input {
+  @apply pl-9;
+}
+
+.input-join.right i {
+  @apply right-3 left-auto;
+}
+
+.input-join.right input {
+  @apply pr-9;
+}
+/* End Form */
+
+/* Sidebar */
+.sidemenu {
+  @apply grid gap-y-1;
+}
+
+.sidemenu > li > .nav-link {
+  @apply inline-flex items-center py-2.5 px-2.5 w-full text-sm font-medium text-gray-700 rounded-md transition-colors duration-150 hover:text-gray-800 hover:bg-gray-100;
+}
+
+.sidemenu > li > .nav-link.active {
+  @apply bg-primary text-white shadow-md;
+}
+/* End Sidebar */
+
+/* Alert */
+.invalid-feedback {
+  @apply text-sm text-red-600 mt-2;
+}
+/* End Alert */

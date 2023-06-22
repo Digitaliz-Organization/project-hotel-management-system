@@ -1,0 +1,25 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+import forms from "@tailwindcss/forms";
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./storage/framework/views/*.php",
+        "./resources/views/**/*.blade.php",
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ["Inter", ...defaultTheme.fontFamily.sans],
+            },
+            colors: {
+                body: "#f1f5f9",
+                primary: "#1a2950",
+            },
+        },
+    },
+
+    plugins: [forms, require("flowbite/plugin")],
+};
