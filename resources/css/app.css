@@ -10,7 +10,7 @@ body {
 
 /* Button */
 .btn {
-  @apply normal-case text-sm h-10 rounded-md min-h-0 font-medium disabled:cursor-not-allowed;
+  @apply normal-case text-sm h-10 rounded-md min-h-0 font-medium disabled:cursor-not-allowed px-4;
 }
 
 .btn.btn-primary {
@@ -32,7 +32,7 @@ body {
 }
 
 .form-label {
-  @apply block font-medium mb-1 text-gray-700;
+  @apply block text-sm font-medium mb-1 text-gray-700;
 }
 
 .input-group {

@@ -6,16 +6,19 @@
     @include('includes.styles')
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-        <div>
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+<body class="font-sans bg-white antialiased">
+    <div class="flex flex-wrap h-screen w-full">
+        <div
+            class="flex h-screen justify-center items-center flex-wrap overflow-hidden p-8 w-full md:w-[40%] 2xl:w-[35%]">
+            <div class="w-full">
+                <x-application-logo class="h-12 mb-5" />
+                <p class="text-xl font-semibold">Sign In</p>
+                <p class="mb-8">Silakan masuk ke akun Anda</p>
+                {{ $slot }}
+            </div>
         </div>
-
-        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-            {{ $slot }}
+        <div class="w-[60%] 2xl:w-[65%] hidden md:block">
+            <img src="{{ asset('assets/img/bg/login.jpg') }}" class="w-full h-screen max-w-full" alt="img" />
         </div>
     </div>
 
